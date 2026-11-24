@@ -1,0 +1,5 @@
+# TODO: replace the domain below with your real domain
+User-agent: *
+Allow: /
+
+Sitemap: https://abid102-tech.github.io/sitemap.xml

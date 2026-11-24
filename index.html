@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- ============================================================
+       SEO / SOCIAL
+       TODO: Replace every "https://abid102-tech.github.io" with your real domain
+             (also in sitemap.xml, robots.txt and the JSON-LD block below).
+       ============================================================ -->
+  <title>Abid Islam Khalid — Software Engineer &amp; Cybersecurity Specialist</title>
+  <meta name="description" content="Abid Islam Khalid is a Software Engineering (Cybersecurity) student at Daffodil International University building secure software and researching deepfake detection and IoMT security." />
+  <meta name="author" content="Abid Islam Khalid" />
+  <meta name="keywords" content="Abid Islam Khalid, Software Engineer, Cybersecurity, AI Research, Deepfake Detection, IoMT Security, Daffodil International University, Bangladesh, Portfolio" />
+  <link rel="canonical" href="https://abid102-tech.github.io/" />
+  <meta name="theme-color" content="#0a0b0f" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)" />
+  <meta name="color-scheme" content="dark light" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Abid Islam Khalid" />
+  <meta property="og:title" content="Abid Islam Khalid — Software Engineer &amp; Cybersecurity Specialist" />
+  <meta property="og:description" content="Building secure, intelligent software and researching how to keep AI trustworthy." />
+  <meta property="og:url" content="https://abid102-tech.github.io/" />
+  <meta property="og:image" content="https://abid102-tech.github.io/assets/img/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Abid Islam Khalid — Software Engineer, Cybersecurity Specialist, AI Researcher" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Abid Islam Khalid — Software Engineer &amp; Cybersecurity Specialist" />
+  <meta name="twitter:description" content="Building secure, intelligent software and researching how to keep AI trustworthy." />
+  <meta name="twitter:image" content="https://abid102-tech.github.io/assets/img/og-image.png" />
+  <!-- TODO (optional): add your X/Twitter handle -->
+  <!-- <meta name="twitter:creator" content="@your_handle" /> -->
+
+  <!-- Icons & manifest -->
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
+
+  <!-- Apply saved theme before first paint (prevents a light/dark flash) -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+      document.documentElement.classList.add('js');
+    })();
+  </script>
+
+  <!-- Fonts: Inter (body) + JetBrains Mono (accents) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Loaded without blocking first paint; system fonts show until these arrive -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" /></noscript>
+
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Structured data: Person schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Abid Islam Khalid",
+    "url": "https://abid102-tech.github.io/",
+    "image": "https://abid102-tech.github.io/assets/img/og-image.png",
+    "jobTitle": "Software Engineer & Cybersecurity Specialist",
+    "description": "Software Engineering (Cybersecurity) student, AI researcher and tech entrepreneur from Bangladesh.",
+    "email": "mailto:abidabone1020@gmail.com",
+    "nationality": "Bangladeshi",
+    "address": { "@type": "PostalAddress", "addressLocality": "Dhaka", "addressCountry": "BD" },
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Daffodil International University",
+      "url": "https://daffodilvarsity.edu.bd/"
+    },
+    "knowsAbout": ["Software Engineering", "Cybersecurity", "Artificial Intelligence", "Deepfake Detection", "IoMT Security", "Flutter", "Python", "C++", "Java"],
+    "sameAs": [
+      "https://github.com/abid102-tech",
+      "https://www.linkedin.com/in/your-linkedin-handle"
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Inline SVG icon sprite (referenced with <use href="#i-name">) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></symbol>
+      <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></g></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></symbol>
+      <symbol id="i-external" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6"/><path d="M20 4 10 14"/><path d="M19 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"/></g></symbol>
+      <symbol id="i-download" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></g></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></g></symbol>
+      <symbol id="i-arrow-up" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"/><path d="m6 11 6-6 6 6"/></g></symbol>
+      <symbol id="i-sun" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></g></symbol>
+      <symbol id="i-moon" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></symbol>
+      <symbol id="i-code" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m8 7-5 5 5 5"/><path d="m16 7 5 5-5 5"/><path d="m14 4-4 16"/></g></symbol>
+      <symbol id="i-globe" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></g></symbol>
+      <symbol id="i-mobile" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></g></symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 3.4 8.3 8 9 4.6-.7 8-4 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></g></symbol>
+      <symbol id="i-brain" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4a3 3 0 0 0-3 3 3 3 0 0 0-2 5 3 3 0 0 0 2 5 3 3 0 0 0 6 0V6a2 2 0 0 0-3-2Z"/><path d="M15 4a3 3 0 0 1 3 3 3 3 0 0 1 2 5 3 3 0 0 1-2 5 3 3 0 0 1-6 0"/></g></symbol>
+      <symbol id="i-database" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></g></symbol>
+      <symbol id="i-file" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8l-5-5Z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></g></symbol>
+      <symbol id="i-cap" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m2 9 10-5 10 5-10 5L2 9Z"/><path d="M6 11v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/><path d="M22 9v6"/></g></symbol>
+      <symbol id="i-rocket" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 15c-1.5 1.3-2 5-2 5s3.7-.5 5-2c.7-.8.7-2-.1-2.8a2 2 0 0 0-2.9-.2Z"/><path d="m12 15-3-3a22 22 0 0 1 2-4A12.9 12.9 0 0 1 22 2c0 2.7-.8 7.5-6 11a22 22 0 0 1-4 2Z"/><path d="M9 12H4s.6-3 2-4c1.6-1.1 5 0 5 0M12 15v5s3-.6 4-2c1.1-1.6 0-5 0-5"/></g></symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></symbol>
+      <symbol id="i-close" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></g></symbol>
+    </defs>
+  </svg>
+
+  <!-- ============================== NAVBAR ============================== -->
+  <header class="site-header" id="top">
+    <nav class="nav container" aria-label="Primary">
+      <a class="brand" href="#hero">
+        <span class="brand-mark" aria-hidden="true">AK</span>
+        <span class="brand-name">Abid Islam Khalid</span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="icon-btn theme-toggle" type="button" aria-label="Switch to light mode" title="Toggle theme">
+          <svg class="icon icon-sun" aria-hidden="true"><use href="#i-sun"/></svg>
+          <svg class="icon icon-moon" aria-hidden="true"><use href="#i-moon"/></svg>
+        </button>
+        <button class="icon-btn nav-toggle" type="button" aria-controls="nav-links" aria-expanded="false" aria-label="Open menu">
+          <svg class="icon icon-menu" aria-hidden="true"><use href="#i-menu"/></svg>
+          <svg class="icon icon-close" aria-hidden="true"><use href="#i-close"/></svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- ============================== HERO ============================== -->
+    <section class="hero" id="hero" aria-labelledby="hero-title">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="hero-glow hero-glow--a"></div>
+        <div class="hero-glow hero-glow--b"></div>
+        <div class="hero-grid"></div>
+      </div>
+
+      <div class="container hero-inner">
+        <p class="eyebrow mono hero-in" style="--d:0ms">
+          <span class="status-dot" aria-hidden="true"></span>
+          Open to internships &amp; research collaborations <!-- TODO: update your availability -->
+        </p>
+
+        <h1 class="hero-title hero-rise" id="hero-title">Abid Islam Khalid</h1>
+
+        <p class="hero-role hero-in" style="--d:120ms">
+          <span class="mono prompt" aria-hidden="true">&gt;</span>
+          <!-- Visible rotating text is decorative; screen readers get the full list below -->
+          <span class="rotator" aria-hidden="true" data-words="Software Engineer|Cybersecurity Specialist|AI Researcher|Tech Entrepreneur|Project Manager">Software Engineer</span><span class="caret" aria-hidden="true"></span>
+          <span class="sr-only">Software Engineer, Cybersecurity Specialist, AI Researcher, Tech Entrepreneur and Project Manager</span>
+        </p>
+
+        <p class="hero-lede hero-rise" style="--d:180ms">
+          Building secure, intelligent software — and researching how to keep AI trustworthy.
+        </p>
+
+        <div class="hero-cta hero-in" style="--d:240ms">
+          <a class="btn btn-primary" href="#projects">
+            View Projects
+            <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+          </a>
+          <!-- TODO: Replace assets/cv/Abid_Islam_Khalid_CV.pdf with your latest CV (keep the same filename) -->
+          <a class="btn btn-secondary" href="assets/cv/Abid_Islam_Khalid_CV.pdf" download>
+            <svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>
+            Download CV
+          </a>
+          <a class="btn btn-ghost" href="#contact">Contact</a>
+        </div>
+
+        <ul class="hero-social hero-in" style="--d:320ms" aria-label="Social links">
+          <!-- TODO: confirm GitHub URL and replace LinkedIn handle -->
+          <li><a class="icon-btn" href="https://github.com/abid102-tech" target="_blank" rel="noopener noreferrer" aria-label="GitHub (opens in new tab)"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg></a></li>
+          <li><a class="icon-btn" href="https://www.linkedin.com/in/your-linkedin-handle" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in new tab)"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg></a></li>
+          <li><a class="icon-btn" href="mailto:abidabone1020@gmail.com" aria-label="Email Abid"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></a></li>
+        </ul>
+      </div>
+
+      <a class="scroll-cue" href="#about" aria-label="Scroll to About section">
+        <span class="scroll-cue-line" aria-hidden="true"></span>
+      </a>
+    </section>
+
+    <!-- ============================== ABOUT ============================== -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-kicker mono">01 — About</p>
+          <h2 class="section-title" id="about-title">Engineer by training. <span class="text-gradient">Security-minded</span> by default.</h2>
+        </header>
+
+        <div class="about-grid">
+          <div class="about-copy reveal">
+            <!-- TODO: personalise your bio (keep it 2–3 short paragraphs) -->
+            <p>
+              I'm a Software Engineering undergraduate at <strong>Daffodil International University</strong>, majoring in
+              <strong>Cybersecurity</strong>. I enjoy turning ideas into reliable, secure products — from mobile apps to
+              AI-powered tools — and I care about the details that make software trustworthy.
+            </p>
+            <p>
+              My research explores how AI can both threaten and protect digital trust: detecting
+              <strong>deepfakes and AI-generated content</strong> in Bangladesh's disinformation landscape, and securing
+              the <strong>Internet of Medical Things (IoMT)</strong>.
+            </p>
+            <p>
+              Beyond code, I lead and serve communities on campus — robotics, blood donation, career development and
+              student admissions — which has sharpened my communication, teamwork and project-management skills.
+            </p>
+            <ul class="about-meta">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> Dhaka, Bangladesh</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg> Bengali (native) · English · Hindi · Urdu · German (basic)</li>
+            </ul>
+          </div>
+
+          <!-- TODO: keep these numbers up to date (data-count = final number) -->
+          <dl class="stats reveal">
+            <div class="stat">
+              <dt>CGPA</dt>
+              <dd><span class="stat-num" data-count="3.70" data-decimals="2">3.70</span><span class="stat-suffix">/4.00</span></dd>
+            </div>
+            <div class="stat">
+              <dt>Research papers</dt>
+              <dd><span class="stat-num" data-count="2">2</span><span class="stat-suffix">+</span></dd>
+            </div>
+            <div class="stat">
+              <dt>Projects built</dt>
+              <dd><span class="stat-num" data-count="3">3</span><span class="stat-suffix">+</span></dd>
+            </div>
+            <div class="stat">
+              <dt>Leadership roles</dt>
+              <dd><span class="stat-num" data-count="4">4</span></dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== SKILLS ============================== -->
+    <section class="section section--alt" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-kicker mono">02 — Skills</p>
+          <h2 class="section-title" id="skills-title">A toolkit for building <span class="text-gradient">secure</span> software.</h2>
+          <p class="section-sub">Dots indicate depth: <span class="legend"><span class="lvl" data-level="3" aria-hidden="true"><i></i><i></i><i></i></span> advanced</span> <span class="legend"><span class="lvl" data-level="2" aria-hidden="true"><i></i><i></i><i></i></span> proficient</span> <span class="legend"><span class="lvl" data-level="1" aria-hidden="true"><i></i><i></i><i></i></span> familiar</span></p>
+        </header>
+
+        <!-- TODO: adjust skills and levels (data-level="1|2|3") to match your honest self-assessment -->
+        <div class="skills-grid">
+          <article class="skill-card reveal">
+            <div class="skill-card-head">
+              <span class="skill-icon" aria-hidden="true"><svg class="icon"><use href="#i-code"/></svg></span>
+              <h3>Languages</h3>
+            </div>
+            <ul class="skill-list">
+              <li><span>C / C++</span><span class="lvl" data-level="3" role="img" aria-label="Advanced"><i></i><i></i><i></i></span></li>
+              <li><span>Python</span><span class="lvl" data-level="3" role="img" aria-label="Advanced"><i></i><i></i><i></i></span></li>
+              <li><span>Java</span><span class="lvl" data-level="2" role="img" aria-label="Proficient"><i></i><i></i><i></i></span></li>
+              <li><span>JavaScript</span><span class="lvl" data-level="2" role="img" aria-label="Proficient"><i></i><i></i><i></i></span></li>
+              <li><span>SQL (MySQL, SQLite)</span><span class="lvl" data-level="2" role="img" aria-label="Proficient"><i></i><i></i><i></i></span></li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-card-head">
+              <span class="skill-icon" aria-hidden="true"><svg class="icon"><use href="#i-globe"/></svg></span>
+              <h3>Web</h3>
+            </div>
+            <ul class="skill-list">
+              <li><span>HTML5</span><span class="lvl" data-level="3" role="img" aria-label="Advanced"><i></i><i></i><i></i></span></li>
+              <li><span>CSS3 / Responsive design</span><span class="lvl" data-level="3" role="img" aria-label="Advanced"><i></i><i></i><i></i></span></li>
+              <li><span>JavaScript (DOM, ES6+)</span><span class="lvl" data-level="2" role="img" aria-label="Proficient"><i></i><i></i><i></i></span></li>
+              <li><span>Web accessibility &amp; SEO</span><span class="lvl" data-level="2" role="img" aria-label="Proficient"><i></i><i></i><i></i></span></li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-card-head">
+              <span class="skill-icon" aria-hidden="true"><svg class="icon"><use href="#i-mobile"/></svg></span>
+              <h3>Mobile</h3>
+            </div>
+            <ul class="skill-list">
+              <li><span>Flutter</span><span class="lvl" data-level="2" role="img" aria-label="Proficient"><i></i><i></i><i></i></span></li>
+              <li><span>Dart</span><span class="lvl" data-level="2" role="img" aria-label="Proficient"><i></i><i></i><i></i></span></li>
+              <li><span>Firebase</span><span class="lvl" data-level="1" role="img" aria-label="Familiar"><i></i><i></i><i></i></span></li>
+              <li><span>Material / Cupertino UI</span><span class="lvl" data-level="2" role="img" aria-label="Proficient"><i></i><i></i><i></i></span></li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-card-head">
+              <span class="skill-icon" aria-hidden="true"><svg class="icon"><use href="#i-shield"/></svg></span>
+              <h3>Security</h3>
+            </div>
+            <ul class="skill-list">
+              <li><span>Networking fundamentals</span><span class="lvl" data-level="2" role="img" aria-label="Proficient"><i></i><i></i><i></i></span></li>
+              <li><span>IoMT / IoT security</span><span class="lvl" data-level="2" role="img" aria-label="Proficient"><i></i><i></i><i></i></span></li>
+              <li><span>Threat modeling</span><span class="lvl" data-level="1" role="img" aria-label="Familiar"><i></i><i></i><i></i></span></li>
+              <li><span>Secure software development</span><span class="lvl" data-level="2" role="img" aria-label="Proficient"><i></i><i></i><i></i></span></li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-card-head">
+              <span class="skill-icon" aria-hidden="true"><svg class="icon"><use href="#i-brain"/></svg></span>
+              <h3>AI / Research</h3>
+            </div>
+            <ul class="skill-list">
+              <li><span>Deepfake &amp; AI-content detection</span><span class="lvl" data-level="2" role="img" aria-label="Proficient"><i></i><i></i><i></i></span></li>
+              <li><span>Machine learning (Python)</span><span class="lvl" data-level="2" role="img" aria-label="Proficient"><i></i><i></i><i></i></span></li>
+              <li><span>Literature review &amp; academic writing</span><span class="lvl" data-level="3" role="img" aria-label="Advanced"><i></i><i></i><i></i></span></li>
+              <li><span>MATLAB</span><span class="lvl" data-level="1" role="img" aria-label="Familiar"><i></i><i></i><i></i></span></li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-card-head">
+              <span class="skill-icon" aria-hidden="true"><svg class="icon"><use href="#i-database"/></svg></span>
+              <h3>Engineering &amp; Tools</h3>
+            </div>
+            <ul class="skill-list">
+              <li><span>Requirements engineering</span><span class="lvl" data-level="3" role="img" aria-label="Advanced"><i></i><i></i><i></i></span></li>
+              <li><span>Project &amp; team management</span><span class="lvl" data-level="3" role="img" aria-label="Advanced"><i></i><i></i><i></i></span></li>
+              <li><span>Git &amp; GitHub</span><span class="lvl" data-level="2" role="img" aria-label="Proficient"><i></i><i></i><i></i></span></li>
+              <li><span>AutoCAD / SolidWorks</span><span class="lvl" data-level="1" role="img" aria-label="Familiar"><i></i><i></i><i></i></span></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== PROJECTS ============================== -->
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-kicker mono">03 — Projects</p>
+          <h2 class="section-title" id="projects-title">Selected <span class="text-gradient">work</span>.</h2>
+          <p class="section-sub">Products and prototypes at the intersection of security, AI and everyday usefulness.</p>
+        </header>
+
+        <!-- TODO: For each project, update the description, tech tags, and the GitHub / Live URLs.
+             To add a project, copy one <article class="project-card"> block. -->
+        <div class="projects-grid">
+          <article class="project-card reveal">
+            <div class="project-top">
+              <span class="project-index mono">01</span>
+              <span class="project-type mono">FinTech · Security</span>
+            </div>
+            <h3 class="project-title">Credo Wallet</h3>
+            <p class="project-desc">
+              A secure digital wallet for managing balances and peer-to-peer payments, designed around strong
+              authentication, encrypted storage and a clean, trustworthy UX.
+            </p>
+            <ul class="tags" aria-label="Tech stack">
+              <li>Flutter</li><li>Dart</li><li>Firebase</li><li>Encryption</li>
+            </ul>
+            <div class="project-links">
+              <a class="link-btn" href="https://github.com/abid102-tech" target="_blank" rel="noopener noreferrer" aria-label="Credo Wallet source code on GitHub (opens in new tab)">
+                <svg class="icon" aria-hidden="true"><use href="#i-github"/></svg> Code
+              </a>
+              <a class="link-btn" href="#" target="_blank" rel="noopener noreferrer" aria-label="Credo Wallet live demo (opens in new tab)"><!-- TODO: live link (or delete this <a>) -->
+                <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg> Live
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-top">
+              <span class="project-index mono">02</span>
+              <span class="project-type mono">HealthTech · AI</span>
+            </div>
+            <h3 class="project-title">Medicare AI</h3>
+            <p class="project-desc">
+              An AI-assisted healthcare companion that helps patients check symptoms, track medication and connect
+              with care — built with privacy and medical-data security in mind.
+            </p>
+            <ul class="tags" aria-label="Tech stack">
+              <li>Python</li><li>Machine Learning</li><li>Flutter</li><li>REST API</li>
+            </ul>
+            <div class="project-links">
+              <a class="link-btn" href="https://github.com/abid102-tech" target="_blank" rel="noopener noreferrer" aria-label="Medicare AI source code on GitHub (opens in new tab)">
+                <svg class="icon" aria-hidden="true"><use href="#i-github"/></svg> Code
+              </a>
+              <a class="link-btn" href="#" target="_blank" rel="noopener noreferrer" aria-label="Medicare AI live demo (opens in new tab)"><!-- TODO: live link (or delete this <a>) -->
+                <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg> Live
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-top">
+              <span class="project-index mono">03</span>
+              <span class="project-type mono">EdTech · Web</span>
+            </div>
+            <h3 class="project-title">SmartCampus</h3>
+            <p class="project-desc">
+              A unified campus platform for students and staff — schedules, notices, attendance and services in one
+              place, with role-based access control.
+            </p>
+            <ul class="tags" aria-label="Tech stack">
+              <li>HTML</li><li>CSS</li><li>JavaScript</li><li>MySQL</li>
+            </ul>
+            <div class="project-links">
+              <a class="link-btn" href="https://github.com/abid102-tech" target="_blank" rel="noopener noreferrer" aria-label="SmartCampus source code on GitHub (opens in new tab)">
+                <svg class="icon" aria-hidden="true"><use href="#i-github"/></svg> Code
+              </a>
+              <a class="link-btn" href="#" target="_blank" rel="noopener noreferrer" aria-label="SmartCampus live demo (opens in new tab)"><!-- TODO: live link (or delete this <a>) -->
+                <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg> Live
+              </a>
+            </div>
+          </article>
+
+          <!-- TODO: Replace this card with another real project, or delete it -->
+          <article class="project-card reveal">
+            <div class="project-top">
+              <span class="project-index mono">04</span>
+              <span class="project-type mono">Research · AI Security</span>
+            </div>
+            <h3 class="project-title">Deepfake Detector (Research Prototype)</h3>
+            <p class="project-desc">
+              A research prototype for flagging AI-generated images and videos circulating in Bangladeshi social media,
+              supporting the deepfake-detection paper below.
+            </p>
+            <ul class="tags" aria-label="Tech stack">
+              <li>Python</li><li>Deep Learning</li><li>Computer Vision</li>
+            </ul>
+            <div class="project-links">
+              <a class="link-btn" href="https://github.com/abid102-tech" target="_blank" rel="noopener noreferrer" aria-label="Deepfake Detector source code on GitHub (opens in new tab)">
+                <svg class="icon" aria-hidden="true"><use href="#i-github"/></svg> Code
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Ventures -->
+        <div class="ventures reveal">
+          <h3 class="subhead"><svg class="icon" aria-hidden="true"><use href="#i-rocket"/></svg> Ventures</h3>
+          <!-- TODO: Replace with your real startup / venture names, one-line descriptions and links -->
+          <ul class="venture-list">
+            <li class="venture">
+              <div>
+                <p class="venture-name">Your Venture Name</p>
+                <p class="venture-desc">One-line description of what it does and who it serves.</p>
+              </div>
+              <span class="badge mono">Founder · 2025</span>
+            </li>
+            <li class="venture">
+              <div>
+                <p class="venture-name">Second Venture</p>
+                <p class="venture-desc">One-line description of the problem it solves.</p>
+              </div>
+              <span class="badge mono">Co-founder · 2026</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== RESEARCH ============================== -->
+    <section class="section section--alt" id="research" aria-labelledby="research-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-kicker mono">04 — Research &amp; Publications</p>
+          <h2 class="section-title" id="research-title">Making AI and connected systems <span class="text-gradient">trustworthy</span>.</h2>
+        </header>
+
+        <!-- TODO: Use your exact paper titles, authors, venue/journal, year, status and DOI/PDF links -->
+        <ol class="pub-list">
+          <li class="pub reveal">
+            <div class="pub-meta">
+              <span class="badge badge--accent mono">Under review</span>
+              <span class="pub-year mono">2026</span>
+            </div>
+            <h3 class="pub-title">Detecting Deepfakes and AI-Generated Content in Bangladesh's Disinformation Landscape</h3>
+            <p class="pub-authors"><strong>A. I. Khalid</strong>, et al. — <em>Conference / Journal name</em></p>
+            <p class="pub-abstract">
+              Examines how synthetic media spreads through Bangladeshi online platforms and evaluates detection
+              approaches suited to local languages, low-resource data and real-world disinformation campaigns.
+            </p>
+            <ul class="tags" aria-label="Topics"><li>Deepfakes</li><li>Disinformation</li><li>Computer Vision</li><li>Bangladesh</li></ul>
+            <div class="project-links">
+              <a class="link-btn" href="#" aria-label="Read paper: deepfake detection"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg> Paper</a><!-- TODO: link -->
+            </div>
+          </li>
+
+          <li class="pub reveal">
+            <div class="pub-meta">
+              <span class="badge badge--accent mono">Under review</span>
+              <span class="pub-year mono">2026</span>
+            </div>
+            <h3 class="pub-title">Cybersecurity Threats and Defenses in the Internet of Medical Things (IoMT)</h3>
+            <p class="pub-authors"><strong>A. I. Khalid</strong>, et al. — <em>Conference / Journal name</em></p>
+            <p class="pub-abstract">
+              Surveys attack surfaces across connected medical devices and proposes practical security controls to
+              protect patient safety and sensitive health data.
+            </p>
+            <ul class="tags" aria-label="Topics"><li>IoMT</li><li>Healthcare Security</li><li>IoT</li></ul>
+            <div class="project-links">
+              <a class="link-btn" href="#" aria-label="Read paper: IoMT cybersecurity"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg> Paper</a><!-- TODO: link -->
+            </div>
+          </li>
+
+          <li class="pub pub--muted reveal">
+            <div class="pub-meta">
+              <span class="badge mono">In progress</span>
+            </div>
+            <h3 class="pub-title">More research underway</h3>
+            <p class="pub-abstract">Ongoing work in AI security and trustworthy machine learning. Interested in collaborating? <a href="#contact">Get in touch</a>.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============================== EXPERIENCE ============================== -->
+    <section class="section" id="experience" aria-labelledby="experience-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-kicker mono">05 — Experience &amp; Leadership</p>
+          <h2 class="section-title" id="experience-title">Leading teams, <span class="text-gradient">serving</span> communities.</h2>
+        </header>
+
+        <!-- TODO: refine each role's bullet points with concrete outcomes (numbers help recruiters) -->
+        <ol class="timeline">
+          <li class="tl-item reveal">
+            <div class="tl-dot" aria-hidden="true"></div>
+            <div class="tl-card">
+              <div class="tl-head">
+                <h3 class="tl-role">Student Associate</h3>
+                <span class="tl-date mono"><time datetime="2026-09">Sep 2026</time> — Present</span>
+              </div>
+              <p class="tl-org">Admission &amp; Counselling, Daffodil International University</p>
+              <ul class="tl-points">
+                <li>Guide prospective students and families through programs, admission requirements and scholarships.</li>
+                <li>Support the admissions team with counselling sessions, events and applicant follow-ups.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="tl-item reveal">
+            <div class="tl-dot" aria-hidden="true"></div>
+            <div class="tl-card">
+              <div class="tl-head">
+                <h3 class="tl-role">Executive Member</h3>
+                <span class="tl-date mono"><time datetime="2025-01">Jan 2025</time> — Present</span>
+              </div>
+              <p class="tl-org">DIU Robotics Club</p>
+              <ul class="tl-points">
+                <li>Help plan workshops, competitions and hands-on robotics sessions for members.</li>
+                <li>Coordinate project teams and mentor newer members on embedded and software tooling.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="tl-item reveal">
+            <div class="tl-dot" aria-hidden="true"></div>
+            <div class="tl-card">
+              <div class="tl-head">
+                <h3 class="tl-role">Career Ambassador</h3>
+                <span class="tl-date mono"><time datetime="2025-01">Jan 2025</time> — Present</span>
+              </div>
+              <p class="tl-org">Career Development Center, DIU</p>
+              <ul class="tl-points">
+                <li>Connect students with career resources, seminars and industry opportunities.</li>
+                <li>Promote and help run CDC events, job fairs and skill-development programs.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="tl-item reveal">
+            <div class="tl-dot" aria-hidden="true"></div>
+            <div class="tl-card">
+              <div class="tl-head">
+                <h3 class="tl-role">Department Representative</h3>
+                <span class="tl-date mono"><time datetime="2025-01">Jan 2025</time> — Present</span>
+              </div>
+              <p class="tl-org">DIU Blood Donation Club</p>
+              <ul class="tl-points">
+                <li>Represent the Software Engineering department and mobilise donors for emergency requests.</li>
+                <li>Help organise blood donation campaigns and awareness drives on campus.</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============================== EDUCATION ============================== -->
+    <section class="section section--alt" id="education" aria-labelledby="education-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-kicker mono">06 — Education</p>
+          <h2 class="section-title" id="education-title">Academic <span class="text-gradient">foundation</span>.</h2>
+        </header>
+
+        <div class="edu-grid">
+          <article class="edu-card edu-card--featured reveal">
+            <div class="edu-head">
+              <span class="skill-icon" aria-hidden="true"><svg class="icon"><use href="#i-cap"/></svg></span>
+              <span class="badge badge--accent mono">Expected 2028</span>
+            </div>
+            <h3 class="edu-degree">B.Sc. in Software Engineering</h3>
+            <p class="edu-major mono">Major: Cybersecurity</p>
+            <p class="edu-school">Daffodil International University · Dhaka, Bangladesh</p>
+            <p class="edu-score"><span class="edu-score-num">3.70</span> <span class="edu-score-label">CGPA / 4.00</span></p>
+            <!-- TODO: list your most relevant courses -->
+            <ul class="tags" aria-label="Relevant coursework">
+              <li>Data Structures &amp; Algorithms</li><li>Software Requirements</li><li>Computer Networks</li><li>Information Security</li><li>Database Systems</li>
+            </ul>
+          </article>
+
+          <article class="edu-card reveal">
+            <div class="edu-head">
+              <span class="badge mono">2023</span>
+            </div>
+            <h3 class="edu-degree">Higher Secondary Certificate (Science)</h3>
+            <p class="edu-school">Elias Ahmed Chowdhury College, Dhaka</p>
+            <p class="edu-score"><span class="edu-score-num">4.92</span> <span class="edu-score-label">GPA / 5.00</span></p>
+          </article>
+
+          <article class="edu-card reveal">
+            <div class="edu-head">
+              <span class="badge mono">2021</span>
+            </div>
+            <h3 class="edu-degree">Secondary School Certificate (Science)</h3>
+            <p class="edu-school">D.T.N. Academy, Dhaka</p>
+            <p class="edu-score"><span class="edu-score-num">4.71</span> <span class="edu-score-label">GPA / 5.00</span></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== CONTACT ============================== -->
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-intro reveal">
+            <p class="section-kicker mono">07 — Contact</p>
+            <h2 class="section-title" id="contact-title">Let's build something <span class="text-gradient">secure</span> together.</h2>
+            <p class="section-sub">
+              Internships, research collaborations, speaking or just a hello — my inbox is open. I usually reply within 48 hours.
+            </p>
+
+            <!-- TODO: confirm email / phone and add your LinkedIn handle -->
+            <ul class="contact-links">
+              <li>
+                <a href="mailto:abidabone1020@gmail.com">
+                  <span class="skill-icon" aria-hidden="true"><svg class="icon"><use href="#i-mail"/></svg></span>
+                  <span><span class="cl-label mono">Email</span><span class="cl-value">abidabone1020@gmail.com</span></span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/your-linkedin-handle" target="_blank" rel="noopener noreferrer">
+                  <span class="skill-icon" aria-hidden="true"><svg class="icon"><use href="#i-linkedin"/></svg></span>
+                  <span><span class="cl-label mono">LinkedIn</span><span class="cl-value">linkedin.com/in/your-linkedin-handle</span></span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/abid102-tech" target="_blank" rel="noopener noreferrer">
+                  <span class="skill-icon" aria-hidden="true"><svg class="icon"><use href="#i-github"/></svg></span>
+                  <span><span class="cl-label mono">GitHub</span><span class="cl-value">github.com/abid102-tech</span></span>
+                </a>
+              </li>
+              <!-- Phone is optional — delete this <li> to hide it -->
+              <li>
+                <a href="tel:+8801323419652">
+                  <span class="skill-icon" aria-hidden="true"><svg class="icon"><use href="#i-phone"/></svg></span>
+                  <span><span class="cl-label mono">Phone</span><span class="cl-value">+880 1323-419652</span></span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- TODO: Create a free form at https://formspree.io and replace YOUR_FORM_ID below.
+               Until then, the form falls back to opening the visitor's email client (mailto). -->
+          <form class="contact-form reveal" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" data-mailto="abidabone1020@gmail.com" novalidate>
+            <div class="field">
+              <label for="cf-name">Name</label>
+              <input id="cf-name" name="name" type="text" autocomplete="name" required maxlength="100" placeholder="Jane Doe" />
+              <p class="field-error" id="cf-name-err" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label for="cf-email">Email</label>
+              <input id="cf-email" name="email" type="email" autocomplete="email" required maxlength="150" placeholder="jane@company.com" />
+              <p class="field-error" id="cf-email-err" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label for="cf-message">Message</label>
+              <textarea id="cf-message" name="message" rows="5" required maxlength="3000" placeholder="Tell me about the opportunity or idea…"></textarea>
+              <p class="field-error" id="cf-message-err" aria-live="polite"></p>
+            </div>
+            <!-- Honeypot field for spam bots (hidden from humans) -->
+            <div class="hp" aria-hidden="true">
+              <label for="cf-company">Company</label>
+              <input id="cf-company" type="text" name="_gotcha" tabindex="-1" autocomplete="off" />
+            </div>
+            <input type="hidden" name="_subject" value="New message from your portfolio" />
+            <button class="btn btn-primary btn-block" type="submit">
+              <span class="btn-label">Send message</span>
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================== FOOTER ============================== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true">AK</span>
+        <p>© <span id="year">2026</span> Abid Islam Khalid. Built with HTML, CSS &amp; vanilla JS.</p>
+      </div>
+      <ul class="footer-social" aria-label="Social links">
+        <li><a class="icon-btn" href="https://github.com/abid102-tech" target="_blank" rel="noopener noreferrer" aria-label="GitHub (opens in new tab)"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg></a></li>
+        <li><a class="icon-btn" href="https://www.linkedin.com/in/your-linkedin-handle" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in new tab)"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg></a></li>
+        <li><a class="icon-btn" href="mailto:abidabone1020@gmail.com" aria-label="Email Abid"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></a></li>
+        <li><a class="icon-btn" href="#hero" aria-label="Back to top"><svg class="icon" aria-hidden="true"><use href="#i-arrow-up"/></svg></a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
