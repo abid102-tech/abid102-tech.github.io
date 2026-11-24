@@ -634,6 +634,23 @@ strong { font-weight: 600; color: var(--text); }
 .venture-name { font-weight: 600; letter-spacing: -0.02em; }
 .venture-desc { color: var(--text-muted); font-size: 0.95rem; }
 .venture .badge { align-self: flex-start; }
+.venture-main { display: flex; align-items: center; gap: 1rem; min-width: 0; }
+.venture-logo {
+  flex: none;
+  width: 56px; height: 56px;
+  border-radius: 14px;
+  background: #fff;
+  border: 1px solid var(--border);
+  object-fit: contain;
+  box-shadow: 0 8px 20px -10px rgba(0, 0, 0, 0.45);
+}
+.venture-logo--mono {
+  display: grid; place-items: center;
+  font-size: 1.05rem; font-weight: 700; letter-spacing: 0.02em;
+  color: #0b0d12;
+  background: var(--gradient);
+  border: 0;
+}
 
 /* 6e. RESEARCH ----------------------------------------------------------- */
 .pub-list { display: grid; gap: 1.25rem; }
